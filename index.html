@@ -1,0 +1,276 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>WikidataConf</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/wdaqua.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="plugin/title-footer/title-footer.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+
+
+	</head>
+	<body>
+		<div class="reveal">
+			<header style="position: absolute;top: 50px; left: 100px; z-index:500; font-size:100px;background-color: rgba(0,0,0,0.5)"></header>
+			<div class="slides">
+				<!-- First slide -->
+				<section ch="-1" style="position: relative; height: 100%;">
+					<img src="assets/QAnswer-logo.png" style="margin-top: 12%; height: 100px; border: none; box-shadow: none;">
+					<h4 style="margin-top: 3%; color: rgb(10,100,147);">Question Answering over Wikidata</h4>
+					<!--<div>by</div>-->
+					<!--<div style="padding-top: 20px;">Dennis Diefenbach</div>-->
+					<!--&lt;!&ndash;<h5 style="padding-top: 20px;">Supervisors: Pierre Maret and Kamal Singh</h5>&ndash;&gt;-->
+					<!--<div style="padding-top: 5%;">-->
+						<!--<img src="assets/hcurien.png" style="height: 70px; border: none; box-shadow: none;">-->
+						<!--<img src="assets/ujm-udl.png" style="height: 70px; border: none; box-shadow: none;">-->
+						<!--<img src="assets/cnrs.png" style="height: 70px; border: none; box-shadow: none;">-->
+						<!--<img src="assets/pulsalys.png" style="height: 70px; border: none; box-shadow: none;">-->
+					<!--</div>-->
+					<div style="font-size: 25px; padding-top: 25px;">25.10.2019</div>
+					<div style="font-size: 25px; padding-top: 25px;">WikidataConf (Berlin)</div>
+					<div style="font-size: 25px; padding-top: 25px;">by Dennis Diefenbach</div>
+					<!--<h4>From BibTeX input:</h4>-->
+					<div id="key1" class="cite" data-type="bib" ></div>
+					<div id="key2" class="cite" data-type="bib" ></div>
+				</section>
+				<section>
+					<h2>Some questions?!?!</h2>
+				</section>
+				<section data-background-iframe="https://qanswer-frontend.univ-st-etienne.fr/" data-background-interactive>
+				</section>
+				<section data-background-iframe="https://qanswer-frontend.univ-st-etienne.fr/qa/full?query=when%20did%20wikidata%20started&tags=%5B%5D&lang=en&kb=wikidata" data-background-interactive>
+				</section>
+				<section data-background-iframe="https://qanswer-frontend.univ-st-etienne.fr/qa/full?query=how%20old%20is%20wikidata&tags=%5B%5D&lang=en&kb=wikidata" data-background-interactive>
+				</section>
+				<section data-background-iframe="https://qanswer-frontend.univ-st-etienne.fr/qa/full?query=who%20is%20developing%20wikidata&tags=%5B%5D&lang=en&kb=wikidata" data-background-interactive>
+				</section>
+				<section data-background-iframe="https://qanswer-frontend.univ-st-etienne.fr/qa/full?query=museums%20in%20berlin&tags=%5B%5D&lang=en&kb=wikidata" data-background-interactive>
+				</section>
+				<section data-background-iframe="https://qanswer-frontend.univ-st-etienne.fr/qa/full?query=who%20is%20the%20mayor%20of%20berlin&tags=%5B%5D&lang=en&kb=wikidata" data-background-interactive>
+				</section>
+				<section data-background-iframe="https://qanswer-frontend.univ-st-etienne.fr/qa/full?query=give%20me%20politicians%20born%20in%20berlin&tags=%5B%5D&lang=en&kb=wikidata" data-background-interactive>
+				</section>
+				<section data-background-iframe="https://qanswer-frontend.univ-st-etienne.fr/qa/full?query=奥巴马出生日期&tags=[]&lang=zh&kb=wikidata" data-background-interactive>
+				</section>
+				<section>
+					<h2>Can this be useful for the Wikidata community?</h2>
+				</section>
+				<section>
+				<h3>Helps generating SPARQL!</h3>
+				</section>
+				<section data-background-iframe="https://qanswer-frontend.univ-st-etienne.fr/qa/full?query=philosophers%20born%20before%201908&tags=%5B%5D&lang=en&kb=wikidata" data-background-interactive>
+				</section>
+				<section>
+					<h3>Find missing contextual information</h3>
+				</section>
+				<section data-background-iframe="https://qanswer-frontend.univ-st-etienne.fr/qa/full?query=actors%20in%20the%20lord%20of%20the%20rings&tags=%5B%5D&lang=en&kb=wikidata" data-background-interactive>
+				</section>
+				<section>
+					<h3>Fixing schema issues</h3>
+				</section>
+				<section data-background-iframe="https://qanswer-frontend.univ-st-etienne.fr/qa/full?query=books%20by%20andreas%20camilleri&tags=%5B%5D&lang=en&kb=wikidata" data-background-interactive>
+				</section>
+				<section data-background-iframe="https://qanswer-frontend.univ-st-etienne.fr/qa/full?query=un%20mese%20con%20montalbano&tags=%5B%5D&lang=it&kb=wikidata" data-background-interactive>
+				</section>
+				<section>
+				<h3>Have fun!</h3>
+				</section>
+				<section data-background-iframe="https://qanswer-frontend.univ-st-etienne.fr/qa/full?query=who%20is%20the%20developer%20of%20qanswer&tags=%5B%5D&lang=en&kb=wikidata%2Copenstreetmap" data-background-interactive>
+				</section>
+				<!-- Final slide -->
+				<section>
+					<h2>Any questions? Ask on</h2>
+					<h2>www.qanswer.eu/qa</h2>
+				</section>
+
+				<!--<section>-->
+					<!--<h2>Appendix</h2>-->
+				<!--</section>-->
+
+				<!--<section ch="4">-->
+					<!--<img src="assets/SPARQLToUser.jpeg" style="width: 80%;">-->
+				<!--</section>-->
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script src="assets/bib.bib"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+                //slideNumber: true,
+                progress: false,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/title-footer/title-footer.js', async: true, callback: function() { } }
+				]
+			});
+		</script>
+
+		<script>
+            Reveal.addEventListener( 'slidechanged', function( event ) {
+                var elem = document.getElementById('title-footer');
+                if (elem!=null){
+                    elem.parentNode.removeChild(elem);
+				}
+                var title = ' ';
+                var color = 'rgb(51, 51, 51)';
+                if (event.currentSlide.getAttribute("ch")=="-1" || event.currentSlide.getAttribute("ch")===undefined || Reveal.getIndices().h===undefined){
+                    title = "-1";
+                }
+                if (event.currentSlide.getAttribute("ch")=="0"){
+                    title = " ";
+                }
+                if (event.currentSlide.getAttribute("ch")=="1"){
+                    title = "What is Question Answering?";
+				}
+                if (event.currentSlide.getAttribute("ch")=="2"){
+                    title = "1. Research Challanges";
+                    color = "darkcyan";
+                }
+                if (event.currentSlide.getAttribute("ch")=="3"){
+                    title = "2. Converting natural language to SPARQL queries";
+                    color = "rebeccapurple";
+                }
+                if (event.currentSlide.getAttribute("ch")=="4"){
+                    title = "3. Trill: A Reusable and Easily Portable Front-End for QA Systems over KB";
+                    color = "orange";
+                }
+                if (event.currentSlide.getAttribute("ch")=="5"){
+                    title = "4. Qanary: An architecture for QA systems";
+                    color = "green";
+                }
+                title_footer.initialize((Reveal.getIndices().h+1)+"/"+Reveal.getTotalSlides(), title, color);
+//                console.log(event.currentSlide.getAttribute("chapter"));
+                //console.log(event.currentSlide.chapter);
+                // event.previousSlide, event.currentSlide, event.indexh, event.indexv
+            } );
+		</script>
+
+		<!--<script class="code" type="text/javascript">-->
+            <!--var citations = $('.cite');-->
+			<!--for (var i=0; i< citations.length; i++){-->
+			    <!--console.log(citations[i].id);-->
+
+			<!--}-->
+
+			<!--var Cite = require('citation-js')-->
+
+            <!--// Set variables-->
+            <!--var cite = new Cite();-->
+            <!--var opt = {-->
+                <!--format: 'string'-->
+            <!--}-->
+
+            <!--// Make shorter ref to function-->
+            <!--var parseAsync = Cite.parse.input.async.chain-->
+
+            <!--// Make a factory for callback-->
+            <!--var callbackFactory = function (out) {-->
+				<!--console.log(out);-->
+                <!--return function (data) {-->
+                    <!--out.html(cite.set(data).get(opt))-->
+                <!--}-->
+            <!--}-->
+
+            <!--$(function(){-->
+                <!--// jQuery elements-->
+				<!--console.log(bib);-->
+				<!--var bibx_in = bib;-->
+
+				<!--console.log("here");-->
+				<!--console.log(bibx_in);-->
+                <!--console.log("here2");-->
+
+
+                <!--// Callbacks-->
+                <!--var bibxCb = callbackFactory($('#bibx-out'));-->
+
+
+                <!--// Declare function to update the output-->
+                <!--function update() {-->
+                    <!--// Get user options-->
+
+                    <!--opt.type = 'html',-->
+					<!--opt.style ='citation-apa',-->
+					<!--opt.lang = 'en-US'-->
+
+                    <!--// Set data (explicit parsing only recommended for async) and set html element to get output-->
+                    <!--parseAsync(bibx_in).then(bibxCb)-->
+                <!--}-->
+
+                <!--// Make output update when input is defocussed...-->
+                <!--$('.in').on('blur', update)-->
+                <!--// ... or a select tag has changed-->
+                <!--$('select').on('change', update)-->
+
+                <!--// Trigger update-->
+                <!--update()-->
+            <!--})-->
+		<!--</script>-->
+	</body>
+	<!--<style type="text/css">-->
+		<!--/* 1. Style header/footer <div> so they are positioned as desired. */-->
+		<!--#header-left {-->
+			<!--position: absolute;-->
+			<!--top: 0%;-->
+			<!--left: 0%;-->
+		<!--}-->
+		<!--#header-right {-->
+			<!--position: absolute;-->
+			<!--top: 0%;-->
+			<!--right: 0%;-->
+		<!--}-->
+		<!--#footer-left {-->
+			<!--position: absolute;-->
+			<!--bottom: 0%;-->
+			<!--left: 0%;-->
+		<!--}-->
+	<!--</style>-->
+
+	<!--&lt;!&ndash; 2. Create hidden header/footer <div> &ndash;&gt;-->
+	<!--<div id="hidden" style="display:none;">-->
+		<!--<div id="header">-->
+			<!--<div id="header-left">HEADER-LEFT</div>-->
+			<!--<div id="header-right">HEADER-RIGHT</div>-->
+			<!--<div id="footer-left">FOOTER-LEFT</div>-->
+		<!--</div>-->
+	<!--</div>-->
+
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<!--<script type="text/javascript">-->
+        <!--// 3. On Reveal.js ready event, copy header/footer <div> into each `.slide-background` <div>-->
+        <!--var header = $('#header').html();-->
+        <!--if ( window.location.search.match( /print-pdf/gi ) ) {-->
+            <!--Reveal.addEventListener( 'ready', function( event ) {-->
+                <!--$('.slide-background').append(header);-->
+            <!--});-->
+        <!--}-->
+        <!--else {-->
+            <!--$('div.what').append(header);-->
+        <!--}-->
+	<!--</script>-->
+</html>

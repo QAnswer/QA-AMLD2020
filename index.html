@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>WikidataConf</title>
+		<title>QAnswer @ AMLD 2020</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/wdaqua.css">
@@ -31,8 +31,11 @@
 			<div class="slides">
 				<!-- First slide -->
 				<section ch="-1" style="position: relative; height: 100%;">
-					<img src="assets/QAnswer-logo.png" style="margin-top: 12%; height: 100px; border: none; box-shadow: none;">
-					<h4 style="margin-top: 3%; color: rgb(10,100,147);">Question Answering over Wikidata</h4>
+					<h3 style="margin-top: 10%; color: rgb(10,100,147);">A Conversational Agent to Support Citizen Interactions powered by Semantic AI</h3>
+					<div style="font-size: 25px; padding-top: 25px;">by Dennis Diefenbach</div>
+					<div style="font-size: 25px; padding-top: 25px;">27.01.2020</div>
+					<div style="font-size: 25px; padding-top: 25px;">@AMLD (Lausanne)</div>
+					<img src="assets/QAnswer-logo.png" style="margin-top: 5%; height: 50px; border: none; box-shadow: none;">
 					<!--<div>by</div>-->
 					<!--<div style="padding-top: 20px;">Dennis Diefenbach</div>-->
 					<!--&lt;!&ndash;<h5 style="padding-top: 20px;">Supervisors: Pierre Maret and Kamal Singh</h5>&ndash;&gt;-->
@@ -42,74 +45,163 @@
 						<!--<img src="assets/cnrs.png" style="height: 70px; border: none; box-shadow: none;">-->
 						<!--<img src="assets/pulsalys.png" style="height: 70px; border: none; box-shadow: none;">-->
 					<!--</div>-->
-					<div style="font-size: 25px; padding-top: 25px;">25.10.2019</div>
-					<div style="font-size: 25px; padding-top: 25px;">WikidataConf (Berlin)</div>
-					<div style="font-size: 25px; padding-top: 25px;">by Dennis Diefenbach</div>
+
+
 					<!--<h4>From BibTeX input:</h4>-->
 					<div id="key1" class="cite" data-type="bib" ></div>
 					<div id="key2" class="cite" data-type="bib" ></div>
 				</section>
+				<!-- Outline -->
 				<section>
-					<h2>Some questions?!?!</h2>
+					<h2>Outline</h2>
+					<ol>
+						<li><a href="#/KG"><div style="display: inline-block; background: darkcyan; width: 35px; height: 35px"></div> Constructing a Knowledge Graph about the European Union</a></li>
+						<li><a href="#/QAnswer"><div style="display: inline-block; background: rebeccapurple; width: 35px; height: 35px"></div> QAnswer: Answering Questions on Top of the Knowledge Graph</a></li>
+						<li><a href="#/Doris"><div style="display: inline-block; background: orange; width: 35px; height: 35px"></div> Integration in a Conversational Agent</a></li>
+					</ol>
 				</section>
-				<section data-background-iframe="https://qanswer-frontend.univ-st-etienne.fr/" data-background-interactive>
+				<!-- Challenges -->
+				<section ch="2" id="KG">
+					<h2>Constructing a Knowledge Graph about the European Union<div style="vertical-align: top; font-size: smaller; display: inline;"></div></h2>
 				</section>
-				<section data-background-iframe="https://qanswer-frontend.univ-st-etienne.fr/qa/full?query=when%20did%20wikidata%20started&tags=%5B%5D&lang=en&kb=wikidata" data-background-interactive>
+				<section ch="2">
+					<div>The Knwoledge Graph is hosted using a new Wikimedia Project: Wikidata</div>
+					<img src="assets/wikimedia_projects.png" style="width: 60%;">
 				</section>
-				<section data-background-iframe="https://qanswer-frontend.univ-st-etienne.fr/qa/full?query=how%20old%20is%20wikidata&tags=%5B%5D&lang=en&kb=wikidata" data-background-interactive>
+				<section ch="2" data-background-iframe="https://linkedopendata.eu/wiki/The_EU_Knowledge_Graph" data-background-interactive>
+					<div style="margin-top: 50%">Available at <a href="https://linkedopendata.eu/">https://linkedopendata.eu/</a> </div>
 				</section>
-				<section data-background-iframe="https://qanswer-frontend.univ-st-etienne.fr/qa/full?query=who%20is%20developing%20wikidata&tags=%5B%5D&lang=en&kb=wikidata" data-background-interactive>
+				<section ch="2">
+					<h3>Current content</h3>
 				</section>
-				<section data-background-iframe="https://qanswer-frontend.univ-st-etienne.fr/qa/full?query=museums%20in%20berlin&tags=%5B%5D&lang=en&kb=wikidata" data-background-interactive>
+				<section ch="2" data-background-iframe="https://linkedopendata.eu/wiki/Item:Q171" data-background-interactive>
+					<div>European institutions</div>
 				</section>
-				<section data-background-iframe="https://qanswer-frontend.univ-st-etienne.fr/qa/full?query=who%20is%20the%20mayor%20of%20berlin&tags=%5B%5D&lang=en&kb=wikidata" data-background-interactive>
+				<section ch="2" data-background-iframe="https://linkedopendata.eu/wiki/Item:Q23" data-background-interactive>
+					<div>European countries</div>
 				</section>
-				<section data-background-iframe="https://qanswer-frontend.univ-st-etienne.fr/qa/full?query=give%20me%20politicians%20born%20in%20berlin&tags=%5B%5D&lang=en&kb=wikidata" data-background-interactive>
+				<section ch="2" data-background-iframe="https://linkedopendata.eu/wiki/Item:Q52" data-background-interactive>
+					<div>Capitals</div>
 				</section>
-				<section data-background-iframe="https://qanswer-frontend.univ-st-etienne.fr/qa/full?query=paintings%20depicting%20dogs&tags=%5B%5D&lang=en&kb=wikidata" data-background-interactive>
+				<section ch="2" data-background-iframe="https://linkedopendata.eu/wiki/Item:Q8361" data-background-interactive>
+					<div>DGs</div>
 				</section>
-				<section data-background-iframe="https://qanswer-frontend.univ-st-etienne.fr/qa/full?query=what%20is%20dog%20in%20german&tags=%5B%5D&lang=en&kb=wikidata" data-background-interactive>
+				<section ch="2" data-background-iframe="https://linkedopendata.eu/wiki/Item:Q74781" data-background-interactive>
+					<div>Projects financed by the European Union</div>
 				</section>
-				<section data-background-iframe="https://qanswer-frontend.univ-st-etienne.fr/qa/full?query=奥巴马出生日期&tags=[]&lang=zh&kb=wikidata" data-background-interactive>
+				<section ch="2">
+					<h3> Some Features</h3>
 				</section>
-				<section>
-					<h2>Can this be useful for the Wikidata community?</h2>
+				<section ch="2">
+					<div>Multilingual</div>
 				</section>
-				<section>
-				<h3>Helps generating SPARQL!</h3>
+				<section ch="2">
+					<div><a href="https://linkedopendata.eu/wiki/Item:Q65">https://linkedopendata.eu/wiki/Item:Q65</a> </div>
 				</section>
-				<section data-background-iframe="https://qanswer-frontend.univ-st-etienne.fr/qa/full?query=philosophers%20born%20before%201908&tags=%5B%5D&lang=en&kb=wikidata" data-background-interactive>
+				<section ch="2">
+					<div>Can be queried</div>
 				</section>
-				<section>
-					<h3>Find missing contextual information</h3>
+				<section ch="2" data-background-iframe="https://query.linkedopendata.eu/#%23Map%20of%20DG%20Regio%20Projects%20in%20denmark%0A%23added%202017-08%0A%23defaultView%3AMap%0Aselect%20%2a%20where%20%7B%0A%20%20%3Fs%20%3Fp%20%3Chttps%3A%2F%2Flinkedopendata.eu%2Fentity%2FQ9934%3E%20.%0A%20%20%3Fs%20%3Chttps%3A%2F%2Flinkedopendata.eu%2Fprop%2Fdirect%2FP127%3E%20%3Fo%20.%0A%20%20%3Fs%20%3Fp2%20%3Chttps%3A%2F%2Flinkedopendata.eu%2Fentity%2FQ12%3E%20.%0A%7D%20" data-background-interactive>
+					<div style="margin-top: 50%">Available at <a href="https://query.linkedopendata.eu/">https://query.linkedopendata.eu/</a> </div>
 				</section>
-				<section data-background-iframe="https://qanswer-frontend.univ-st-etienne.fr/qa/full?query=actors%20in%20the%20lord%20of%20the%20rings&tags=%5B%5D&lang=en&kb=wikidata" data-background-interactive>
+				<section ch="2">
+					<div>Can be edited by humans and by bots</div>
 				</section>
-				<section>
-					<h3>Fixing schema issues</h3>
+				<section ch="2">
+					<div><a href="https://linkedopendata.eu/wiki/Item:Q65">https://linkedopendata.eu/wiki/Item:Q65</a> </div>
 				</section>
-				<section data-background-iframe="https://qanswer-frontend.univ-st-etienne.fr/qa/full?query=books%20by%20andreas%20camilleri&tags=%5B%5D&lang=en&kb=wikidata" data-background-interactive>
+				<section ch="2">
+					<div>Scales</div>
 				</section>
-				<section data-background-iframe="https://qanswer-frontend.univ-st-etienne.fr/qa/full?query=un%20mese%20con%20montalbano&tags=%5B%5D&lang=it&kb=wikidata" data-background-interactive>
+				<section ch="2">
+					<div>Wikibase hosts Wikidata, one of the largest existing KGs containing 5 Billion triples.</div>
 				</section>
-				<section>
-				<h3>Have fun!</h3>
+				<section ch="2">
+					<div>Provenance</div>
 				</section>
-				<section data-background-iframe="https://qanswer-frontend.univ-st-etienne.fr/qa/full?query=who%20is%20the%20developer%20of%20qanswer&tags=%5B%5D&lang=en&kb=wikidata%2Copenstreetmap" data-background-interactive>
+				<section ch="2" data-background-iframe="https://linkedopendata.eu/wiki/Item:Q83" data-background-interactive>
 				</section>
-				<!-- Final slide -->
-				<section>
-					<h2>Any questions? Ask on</h2>
-					<h2>www.qanswer.eu/qa</h2>
+				<section ch="2" data-background-iframe="https://linkedopendata.eu/w/index.php?title=Item:Q83&action=history" data-background-interactive>
 				</section>
 
-				<!--<section>-->
-					<!--<h2>Appendix</h2>-->
-				<!--</section>-->
-
-				<!--<section ch="4">-->
-					<!--<img src="assets/SPARQLToUser.jpeg" style="width: 80%;">-->
-				<!--</section>-->
+				<section ch="3" id="QAnswer">
+					<h2>QAnswer: Answering Questions on top of the Knowledge Graph<div style="vertical-align: top; font-size: smaller; display: inline;"></div></h2>
+				</section>
+				<section ch="3">
+					<h3>Intent Detection vs Semantic Parsing</h3>
+				</section>
+				<section ch="3">
+					<h3>Intent Detection</h3>
+					<div>
+						<div style="font-weight: bold;">Question:</div>
+						<div>I have a problem, my flight was delayed!</div>
+					</div>
+					<div>
+						<div style="font-weight: bold;">Intents:</div>
+						<ol>
+							<li>Flight delayed</li>
+							<li>Flight cancelled</li>
+							<li>Flight overbooked</li>
+							<li>Luggage lost.</li>
+						</ol>
+					</div>
+				</section>
+				<section ch="3">
+					<h3>Semantic Parsing</h3>
+					<div>
+						<div style="font-weight: bold;">Question:</div>
+						<div>What are projects by DG Regio in Denmark?</div>
+					</div>
+					<div style="font-weight: bold; margin-top: 2%">Formal representation:</div>
+					<div style="text-align: left; float:right; white-space: pre;">
+						PREFIX lode: &lt;https://linkedopendata.eu/entity/&gt;
+						PREFIX lodp: &lt;https://linkedopendata.eu/props/direct/&gt;
+						SELECT ?s where {
+							?s lodp:P35 lode:Q9934 .
+							?s lodp:P32 lode:Q12 .
+						}
+					</div>
+				</section>
+				<section ch="3">
+					<h3>Asking question on the Knowledge Graph ...</h3>
+				</section>
+				<section ch="3" data-background-iframe="https://qanswer-frontend.univ-st-etienne.fr/qa/full?query=who%20is%20the%20president%20of%20the%20european%20commission&tags=%5B%5D&lang=en&kb=eu" data-background-interactive>
+				</section>
+				<section ch="3" data-background-iframe="https://qanswer-frontend.univ-st-etienne.fr/qa/full?query=what%20is%20the%20capital%20of%20the%20eu&tags=%5B%5D&lang=en&kb=eu" data-background-interactive>
+				</section>
+				<section ch="3" data-background-iframe="https://qanswer-frontend.univ-st-etienne.fr/qa/full?id=1835159&query=currency%20in%20denmark&tags=%5B%5D&lang=en&kb=eu" data-background-interactive>
+				</section>
+				<section ch="3">
+					<h3>Explainability</h3>
+				</section>
+				<section ch="3" data-background-iframe="https://qanswer-frontend.univ-st-etienne.fr/qa/full?query=head%20of%20dg%20cnect%20&tags=%5B%5D&lang=en&kb=eu" data-background-interactive>
+				</section>
+				<section ch="4" id="/Doris">
+					<h2>Integration in a Conversational Agent<div style="vertical-align: top; font-size: smaller; display: inline;"></div></h2>
+				</section>
+				<section ch="4" data-background="/assets/dori.png">
+					<div><a href="https://chatbot.cnect.eu/">https://chatbot.cnect.eu/</a> </div>
+				</section>
+				<section>
+					<h2>Conclusion</h2>
+					<div style="float: left">We have shown how:</div>
+					<ol>
+						<li>data about the European Union can be aggregated in a Knwoledge Graph</li>
+						<li>this data can be made accessible via natural language</li>
+						<li>the data can be accessed via a Conversational Agent.</a></li>
+					</ol>
+				</section>
+				<section>
+					<div>Acknowledgmentes:</div>
+					<ul>
+						<li>Doris Team @ CNECT</li>
+						<li>Max De Wilde</li>
+						<li>Raphael Hubain</li>
+					</ul>
+				</section>
+				<section>
+					<div>Thank you! Questions?</div>
+				</section>
 			</div>
 		</div>
 
@@ -152,15 +244,15 @@
                     title = "What is Question Answering?";
 				}
                 if (event.currentSlide.getAttribute("ch")=="2"){
-                    title = "1. Research Challanges";
+                    title = "1.Constructing a Knowledge Graph about the European Union";
                     color = "darkcyan";
                 }
                 if (event.currentSlide.getAttribute("ch")=="3"){
-                    title = "2. Converting natural language to SPARQL queries";
+                    title = "2. QAnswer: Answering Questions on top of the Knowledge Graph";
                     color = "rebeccapurple";
                 }
                 if (event.currentSlide.getAttribute("ch")=="4"){
-                    title = "3. Trill: A Reusable and Easily Portable Front-End for QA Systems over KB";
+                    title = "3. Integration in a Conversational Agent";
                     color = "orange";
                 }
                 if (event.currentSlide.getAttribute("ch")=="5"){
